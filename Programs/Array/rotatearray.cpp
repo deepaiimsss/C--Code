@@ -15,4 +15,19 @@ public:
         nums = ans;
         
     }
+   void rotate_array(int arr[], int d, int n){
+    int temp[n];
+    int k = 0;
+    for (int i = d; i < n; i++) {
+        temp[k] = arr[i];
+        k++;
+    }
+    for (int i = 0; i < d; i++) {
+        temp[k] = arr[i];
+        k++;
+    }
+    for (int i = 0; i < n; i++) {
+        arr[i] = temp[i];
+    }
+}
 };
